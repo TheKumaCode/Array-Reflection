@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Array Reflection</title>
+        <link rel="stylesheet" href="Assets/Styles/CSS/main.css">
+        <script src="https://kit.fontawesome.com/52d68163f3.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="notifications">
+            <div class="notif no-email"><p>Email is required.</p></div>
+            <div class="notif invalid-email"><p>Email is invalid</p></div>
+            <div class="notif success"><p>Successfully Added Image (<small class="success-count">1</small>)</p> <i class="fa-solid fa-xmark close"></i></div>
+        </div>
+        <div class="container">
+            <div class="background"></div>
+            <div class="content">
+                <div class="adder">
+                    <div class="img-container">
+                        <div class="reload-img">
+                            <div class="icon-container">
+                                <i class="fa-solid fa-rotate"></i>
+                            </div>
+                        </div>
+                        <img id="loaded-img">
+                    </div>
+                    <form accept="utf-8" class="email-input" id="email-input" name="emailInput" novalidate> 
+                        <input type="email" class="email" id="email" name="email" placeholder="example@email.com">
+                        <div class="attach-btn-container">
+                            <button id="attach"name="attach" class="btn">Attach</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="checker">
+                    <form class="email-output" id="email-output" name="emailOutput" novalidate>
+                        <select id="email-selector" class="email-selector">
+                            <option>Select Email</option>
+                        </select>
+                    </form>
+                    <div class="email-content"></div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="Assets/JS/main.js"></script>
+    </body>
+</html>
