@@ -1,0 +1,181 @@
+html {
+    background: url(https://picsum.photos/1920/1080) no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    background: rgba(0 0 0 / 35%);
+    min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    &-thumb {
+        background: rgb(200, 200, 200); 
+        border-radius: 10px;
+        &:hover {
+            background: rgb(150, 150, 150); 
+        }
+    }
+}
+
+.notifications {
+    display: flex;
+    justify-content: center;
+    .notif {
+        height: 25px;
+        width: 95vw;
+        font-size: 1rem;
+        color: white;
+        text-align: center;
+        position: fixed;
+        border-radius: 0px 0px 15px 15px;
+        top: -25px;
+        z-index: 100;
+        background-color: red;
+        transition: all .25s ease-out;
+        &.success {
+            background-color: green;
+        }
+        p, small {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        &.notify {
+            top: 0px;
+            transition: all .25s ease-in;
+        }
+        .close {
+            margin: 0;
+            color: white;
+            position: absolute;
+            font-size: 1.5rem;
+            top: 0px;
+            right: 10px;
+            cursor: pointer;
+            transition: color .25s linear;
+            &:hover {
+                color: red;
+                transition: color .25s linear;
+            }
+        }
+    }
+}
+
+.container {
+    width: 100%;
+    .content {
+        .adder {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 15px;
+            .img-container {
+                height: 300px;
+                width: 300px;
+                background: transparent;
+                border: 5px solid white;
+                position: relative;
+                border-radius: 15px;
+                background: rgba(133, 133, 133);
+                img {
+                    border-radius: 10px;
+                }
+                .reload-img {
+                    background: rgba(0 0 0 / 70%);
+                    border-radius: 10px;
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    display: flex;
+                    justify-content: center;
+                    transition: all .25s ease-in-out;
+                    cursor: pointer;
+                    .icon-container {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100%;
+                        i {
+                            color: white;
+                            font-size: 5rem;
+                        }
+                    }
+                }
+                &:hover {
+                    .reload-img {
+                        opacity: 1;
+                        transition: all .25s ease-in-out;
+                    }
+                }
+            }
+            .email-input {
+                margin-top: 10px;
+                .email {
+                    width: 250px;
+                    height: 20px;
+                    font-size: 1.1rem;
+                }
+                .attach-btn-container {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 15px;
+                    .btn {
+                        width: 150px;
+                        height: 35px;
+                        border-radius: 10px;
+                        background: white;
+                        font-size: 1.2rem;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .checker {
+            width: 100%;
+            margin-top: 25px;
+            .email-output {
+                display: flex;
+                justify-content: center;
+                .email-selector {
+                    width: 275px;
+                    height: 25px;
+                    font-size: 1.1rem;
+                }
+            }
+            .email-content {
+                margin: 10px 5px 0px 5px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                .email-item {
+                    height: 145px;
+                    width: 145px;
+                    margin: 0px 5px 10px 5px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 767px) {
+    .email-item {
+        width: 200px !important;
+        height: 200px !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .email-item {
+        width: 300px !important;
+        height: 300px !important;
+    }
+}
