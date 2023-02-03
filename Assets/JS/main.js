@@ -97,6 +97,7 @@ eDropdown.onchange = () => {
 function addImg() {
 	//The input of the email is saved as a variable.
 	email = emailInput.value;
+	email = email.toLowerCase();
 	if (!checkForEmail()) {
 		//If the checkForEmail function does not return true the email and image is added to the database.
 		database.push([email, img]);
@@ -117,6 +118,7 @@ function checkForEmail() {
 	//Variables are created for the length of the database, the email in the input, and an null variable.
 	var dblen = database.length;
 	var email = emailInput.value;
+	email = email.toLowerCase();
 	var e;
 	for (var i = 0; i < dblen; i++) {
 		//For loop the goes through all the rows in the database.
@@ -134,6 +136,7 @@ function checkForEmail() {
 function updateEmails() {
 	//Creates a variable for the new email and a new element.
 	var email = emailInput.value;
+	email = email.toLowerCase();
 	let newEmailElement = document.createElement("option");
 	//Sets the value and text of the new element to the new email.
 	newEmailElement.textContent = email;
