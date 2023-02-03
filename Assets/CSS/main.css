@@ -41,7 +41,8 @@ body {
 .notifications .notif.success {
   background-color: green;
 }
-.notifications .notif p, .notifications .notif small {
+.notifications .notif p,
+.notifications .notif small {
   margin: 0;
   font-family: "Poppins", sans-serif;
 }
@@ -99,6 +100,7 @@ body {
   display: flex;
   justify-content: center;
   transition: all 0.25s ease-in-out;
+  z-index: 1;
   cursor: pointer;
 }
 .container .content .adder .img-container .reload-img .icon-container {
